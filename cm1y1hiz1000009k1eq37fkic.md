@@ -11,11 +11,11 @@ tags: sharepoint, spfx, vivaconnections, spfx-120, adaptive-cards-exntsions, htm
 
 With the release of **SPFx 1.20**, developers now have greater flexibility when building Quick Views in Adaptive Card Extensions (ACE). The new update allows you to use **HTML**, **React**, or **any** **front-end framework** of your choice, moving beyond the limitations of the previous Adaptive Card-based approach. This opens up new possibilities for customization and control over the user interface. This guide will walk you through the steps to convert a basic Adaptive Card Quick View into a fully functional **React-based Quick View**.
 
-[Solution Sample -](https://github.com/ahmad-jad-alhak/BasicCard-React-QuickView) [**BasicCard-React-QuickView**](https://github.com/ahmad-jad-alhak/BasicCard-React-QuickView)
+[Solution Sample - **BasicCard-React-QuickView**](https://github.com/ahmad-jad-alhak/BasicCard-React-QuickView)
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729717577930/12d7d590-0dcd-4c8a-bb2a-45e132988feb.png align="center")
 
-### [**Creating a React-based Q**](https://github.com/ahmad-jad-alhak/BasicCard-React-QuickView)**uick View**
+## **Creating a React-based Quick View**
 
 #### **Step 1: Set Up Your SPFx Project**
 
