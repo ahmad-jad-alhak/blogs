@@ -120,7 +120,7 @@ export default CounterWithUseState;
 
 Using `useReducer` allows you to centralize all the logic for updating state in a single reducer function. This helps keep your components clean, and it makes your state transitions easier to understand and extend.
 
-### `counterReducer.ts`
+`counterReducer.ts`
 
 ```typescript
 // reducers/counterReducer.ts
@@ -175,7 +175,7 @@ export const counterReducer = (state: CounterState, action: CounterAction): Coun
 };
 ```
 
-### `CounterWithUseReducer.tsx`
+`CounterWithUseReducer.tsx`
 
 ```typescript
 import React, { useReducer } from 'react';
