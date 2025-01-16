@@ -19,7 +19,7 @@ The `useReducer` hook is a React hook that lets you manage state with a reducer 
 
 For more details on `useReducer`, check out the official [React documentation.](https://react.dev/reference/react/useReducer)
 
-### Syntax:
+Syntax:
 
 ```typescript
 const [state, dispatch] = useReducer(reducer, initialState);
@@ -470,18 +470,18 @@ ReactUseReducerHookBasic/
     Create `src/webparts//state/actions/listActionsTypes.ts` to define action types and their structure:
     
 2. ```typescript
-        //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
-        
-        // Action types for list state management
-        export const FETCH_START = 'FETCH_START';
-        export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-        export const FETCH_ERROR = 'FETCH_ERROR';
-        
-        // Action type definitions
-        export type ListAction =
-          | { type: typeof FETCH_START }
-          | { type: typeof FETCH_SUCCESS; payload: any[] }
-          | { type: typeof FETCH_ERROR; payload: string };
+         //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
+         
+         // Action types for list state management
+         export const FETCH_START = 'FETCH_START';
+         export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+         export const FETCH_ERROR = 'FETCH_ERROR';
+         
+         // Action type definitions
+         export type ListAction =
+           | { type: typeof FETCH_START }
+           | { type: typeof FETCH_SUCCESS; payload: any[] }
+           | { type: typeof FETCH_ERROR; payload: string };
     ```
     
 3. **Create the Reducer**
