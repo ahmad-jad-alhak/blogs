@@ -599,7 +599,7 @@ ReactUseReducerHookBasic/
     export default ReactUseReducerHookBasic;
     ```
     
-    ### **How It Works**
+    **How It Works**
     
 5. **Reducer & Initial State**
     
