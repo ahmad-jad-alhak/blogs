@@ -51,9 +51,7 @@ To understand the benefits of `useReducer`, let’s build a simple counter web p
 
 These benefits make `useReducer` a powerful tool for managing state in applications where state logic is complex or needs to be shared across components.
 
-## **Counter Example**
-
-### Using `useState` Approach
+## Using `useState` Approach
 
 ```typescript
 import React, { useState } from 'react';
@@ -304,9 +302,9 @@ export default ReactUseReducerHookBasic;
 * Adding new state-related actions (e.g., pagination or retry logic) increases complexity.
     
 
-### **Managing State with** `useReducer`
+## **Managing State with** `useReducer`
 
-### **Key Characteristics of** `useReducer`:
+**Key Characteristics of** `useReducer`**:**
 
 * Suitable for **complex state logic** where actions affect multiple state variables.
     
@@ -470,18 +468,18 @@ ReactUseReducerHookBasic/
     Create `src/webparts//state/actions/listActionsTypes.ts` to define action types and their structure:
     
 2. ```typescript
-         //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
-         
-         // Action types for list state management
-         export const FETCH_START = 'FETCH_START';
-         export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-         export const FETCH_ERROR = 'FETCH_ERROR';
-         
-         // Action type definitions
-         export type ListAction =
-           | { type: typeof FETCH_START }
-           | { type: typeof FETCH_SUCCESS; payload: any[] }
-           | { type: typeof FETCH_ERROR; payload: string };
+          //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
+          
+          // Action types for list state management
+          export const FETCH_START = 'FETCH_START';
+          export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+          export const FETCH_ERROR = 'FETCH_ERROR';
+          
+          // Action type definitions
+          export type ListAction =
+            | { type: typeof FETCH_START }
+            | { type: typeof FETCH_SUCCESS; payload: any[] }
+            | { type: typeof FETCH_ERROR; payload: string };
     ```
     
 3. **Create the Reducer**
