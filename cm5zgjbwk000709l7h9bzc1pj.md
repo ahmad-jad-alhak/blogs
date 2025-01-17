@@ -440,7 +440,7 @@ This guide will walk you through the process of implementing a `useReducer`\-bas
 
 ### **Step 2: Implement the Reducer Logic**
 
-#### **Folder Structure**
+#### Folder Structure
 
 Create Create the following folders and files: Organize your project to maintain clean separation of concerns:
 
@@ -463,26 +463,26 @@ ReactUseReducerHookBasic/
 │   │       └── index.ts                    # WebPart index file
 ```
 
-1. #### **Define Action Types**
+1. #### Define Action Types
     
     Create `src/webparts//state/actions/listActionsTypes.ts` to define action types and their structure:
     
 2. ```typescript
-          //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
-          
-          // Action types for list state management
-          export const FETCH_START = 'FETCH_START';
-          export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-          export const FETCH_ERROR = 'FETCH_ERROR';
-          
-          // Action type definitions
-          export type ListAction =
-            | { type: typeof FETCH_START }
-            | { type: typeof FETCH_SUCCESS; payload: any[] }
-            | { type: typeof FETCH_ERROR; payload: string };
+           //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
+           
+           // Action types for list state management
+           export const FETCH_START = 'FETCH_START';
+           export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+           export const FETCH_ERROR = 'FETCH_ERROR';
+           
+           // Action type definitions
+           export type ListAction =
+             | { type: typeof FETCH_START }
+             | { type: typeof FETCH_SUCCESS; payload: any[] }
+             | { type: typeof FETCH_ERROR; payload: string };
     ```
     
-3. **Create the Reducer**
+3. Create the Reducer
     
     In `src/state/reducers/listReducer.ts`, implement the reducer logic:
     
@@ -517,7 +517,7 @@ ReactUseReducerHookBasic/
     };
     ```
     
-4. **Re-export State Files**
+4. Re-export State Files
     
     In `src/state/index.ts`, re-export all reducers and actions for better imports:
     
