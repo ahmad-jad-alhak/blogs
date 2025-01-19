@@ -128,9 +128,7 @@ Challenges with the useState Approach:
 
 By centralizing state updates in one reducer function, you gain clarity and scalability. Consider the following example which manages a counter’s value and parity, including an additional "double" action.
 
-#### File: counterReducer.ts
-
-`counterReducer.ts`
+File → `counterReducer.ts`
 
 ```typescript
 // reducers/counterReducer.ts
@@ -185,7 +183,7 @@ export const counterReducer = (state: CounterState, action: CounterAction): Coun
 };
 ```
 
-`CounterWithUseReducer.tsx`
+File →`CounterWithUseReducer.tsx`
 
 ```typescript
 import React, { useReducer } from 'react';
@@ -302,8 +300,6 @@ export default ReactUseReducerHookBasic;
     
 
 ### Example: Using useReducer for Fetching Items
-
-#### Action Types and Reducer Setup
 
 ```typescript
 import * as React from 'react';
