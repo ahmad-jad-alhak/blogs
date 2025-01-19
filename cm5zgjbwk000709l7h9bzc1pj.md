@@ -13,7 +13,7 @@ State management is essential for creating dynamic and interactive components in
 
 Imagine you’re building a web part that fetches data from multiple SharePoint lists. Managing the loading states, errors, and fetched data can quickly become messy, especially as your logic expands. Without a centralized approach, it’s easy to lose track of updates, causing bugs and inconsistencies. This is where `useReducer` shines—it centralizes state transitions and simplifies managing complex workflows.
 
-## What is `useReducer` Hook?
+### What is `useReducer` Hook?
 
 The `useReducer` hook is a React hook that lets you manage state with a reducer function. This function decides how the state should change in response to specific actions. This method is particularly helpful in SPFx solutions where state transitions are complex or need a centralized approach.
 
@@ -32,7 +32,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
 * `dispatch`: A function to send actions to the reducer.
     
 
-## Benefits of Using `useReducer` Hook:
+### Benefits of Using `useReducer` Hook:
 
 1. **Centralized State Management:** The reducer function centralizes all state updates, making the logic easier to understand and debug. This is especially useful when dealing with multiple state transitions.
     
@@ -109,19 +109,19 @@ const CounterWithUseState: React.FC = () => {
 export default CounterWithUseState;
 ```
 
-**Challenges with the useState Approach:**
+Challenges with the useState Approach:
 
-* **Scattered State Updates:**  
-    Managing related states (`count` and `isEven`) with separate hooks requires updating multiple state variables simultaneously, which can lead to errors.
+* **Scattered Updates:**  
+    Using separate hooks for related state (e.g., `count` and `isEven`) requires multiple coordinated updates, leading to potential errors.
     
-* **Scalability Issues:**  
-    Adding more related state or new actions (e.g., “double” the count) increases complexity and forces you to manage each state separately.
+* **Scalability Challenges:**  
+    As you add new actions (like "double") or more state variables, the logic becomes more complex and error-prone.
     
-* **Multiple pieces of related state**  
-    We have both `count` and `isEven` in separate hooks. Whenever the count changes, we have to manually update `isEven`. This can quickly become error-prone if we keep adding more related states.
+* **Manual Synchronization:**  
+    Maintaining state consistency (updating `isEven` every time `count` changes) can easily lead to mistakes when adding more related states.
     
-* **Adding new actions**  
-    If you want to add new functionality (e.g., "double" the count), you’ll need additional logic inside each piece of state to keep them in sync. The logic can become scattered across multiple setter calls.
+* **Distributed Logic:**  
+    New functionalities require spreading update logic across multiple setter calls, reducing code clarity.
     
 
 ### Using the useReducer Approach
@@ -235,13 +235,9 @@ export default CounterWithUseReducer;
 
 # Handling Data Fetching in SPFx with useState vs. useReducer
 
-In SPFx projects (especially when using PnP.js for SharePoint API calls), managing multiple related states—like loading, error, and data—can become challenging with `useState`.
+When building SPFx web parts, you must manage complex UI states like loading indicators, error handling, and multiple list fetches. Even though PnP.js simplifies SharePoint REST API calls, you still need to organize data and handle states effectively.
 
-When building **SharePoint Framework (SPFx)** web parts, you often need to manage **complex UI states**—like **loading indicators**, **error handling**, or multiple list fetches. While **PnP.js** simplifies calls to the SharePoint REST API, you still need to **organize** the resulting data and **manage** loading/error states effectively.
-
-In SPFx projects, where components can grow quickly in complexity, `useReducer` offers a more structured way to manage state transitions, keeping components clean and logic straightforward. Let’s dive into the differences between state management using `useState` and `useReducer` to understand when each approach works best.
-
-### Example: Using useState for Fetching Items
+For growing SPFx projects, `useReducer` provides a structured approach to state transitions, keeping components clean and logic straightforward. Below is an example using `useState` to fetch and display SharePoint list items.
 
 #### **Example: Using** `useState` for Fetching Items
 
@@ -307,7 +303,7 @@ export default ReactUseReducerHookBasic;
 
 ## Example: Using useReducer for Fetching Items
 
-#### **Action Types and Reducer Setup**
+#### Action Types and Reducer Setup
 
 ```typescript
 import * as React from 'react';
