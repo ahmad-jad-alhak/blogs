@@ -128,7 +128,7 @@ Challenges with the useState Approach:
 
 By centralizing state updates in one reducer function, you gain clarity and scalability. Consider the following example which manages a counter’s value and parity, including an additional "double" action.
 
-#### **File: counterReducer.ts**
+#### File: counterReducer.ts
 
 `counterReducer.ts`
 
@@ -218,7 +218,7 @@ const CounterWithUseReducer: React.FC = () => {
 export default CounterWithUseReducer;
 ```
 
-### Benefits of the `useReducer` Approach
+Benefits of the `useReducer` Approach
 
 1. **Centralized State Updates**  
     With a reducer, all logic for updating `count` and `isEven` is encapsulated in one place. This makes it easier to reason about how the state changes on each action.
@@ -292,7 +292,7 @@ const ReactUseReducerHookBasic: React.FC<IReactUseReducerHookBasicProps> = ({ li
 export default ReactUseReducerHookBasic;
 ```
 
-#### **Challenges with** `useState`:
+#### Challenges with `useState`:
 
 * Managing multiple, related states (e.g., `loading`, `error`, `items`) can become **tedious** and error-prone.
     
@@ -301,7 +301,7 @@ export default ReactUseReducerHookBasic;
 * Adding new state-related actions (e.g., pagination or retry logic) increases complexity.
     
 
-## Example: Using useReducer for Fetching Items
+### Example: Using useReducer for Fetching Items
 
 #### Action Types and Reducer Setup
 
