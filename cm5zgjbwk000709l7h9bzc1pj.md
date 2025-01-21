@@ -32,19 +32,6 @@ const [state, dispatch] = useReducer(reducer, initialState);
 * `dispatch`: A function to send actions to the reducer.
     
 
-### Benefits of Using `useReducer` Hook:
-
-1. **Centralized State Management:** The reducer function centralizes all state updates, making the logic easier to understand and debug. This is especially useful when dealing with multiple state transitions.
-    
-2. **Shared Logic**: It allows for the reuse of state management logic across different components, which is beneficial when multiple components need to follow the same state management patterns.
-    
-3. **Scalability for Complex State**: `useReducer` is well-suited for managing complex state logic that involves multiple actions or state transitions. It allows for easy extension of state logic without cluttering the component with multiple `useState` calls.
-    
-4. **Predictable State Updates**: `useReducer` enforces immutability and ensures that state updates are predictable and follow the defined reducer logic, reducing the likelihood of bugs in complex workflows.
-    
-5. **Improved Readability and Debugging**: By using action types, state transitions become explicit, which enhances code readability. It also simplifies debugging, as you can log actions and state changes within the reducer.
-    
-
 # Comparing Approaches: useState vs. useReducer
 
 To understand the benefits of `useReducer`, let’s build a simple counter web part using SPFx. We’ll compare this approach to a `useState` implementation to highlight why `useReducer` is a better choice for certain scenarios.
@@ -59,11 +46,8 @@ When using `useState` for complex state logic, you might end up with something l
 import React, { useState } from 'react';
 
 const CounterWithUseState: React.FC = () => {
-  // `count` holds the current count value, and `setCount` is the function to update it.
+  
   const [count, setCount] = useState(0);
-
-  // `isEven` determines whether the current count is even or odd.
-  // `setIsEven` updates this value based on the count.
   const [isEven, setIsEven] = useState(true);
     
   // Function to increment the count
@@ -232,8 +216,6 @@ Benefits of the `useReducer` Approach
     
 
 # Handling Data Fetching in SPFx with useState vs. useReducer
-
-When building SPFx web parts, you must manage complex UI states like loading indicators, error handling, and multiple list fetches. Even though PnP.js simplifies SharePoint REST API calls, you still need to organize data and handle states effectively.
 
 For growing SPFx projects, `useReducer` provides a structured approach to state transitions, keeping components clean and logic straightforward. Below is an example using `useState` to fetch and display SharePoint list items.
 
@@ -410,7 +392,7 @@ This guide will walk you through the process of implementing a `useReducer`\-bas
 5. **Install PnP.js Libraries:**
     
     ```bash
-    npm install @pnp/sp @pnp/logging @pnp/common @pnp/odata
+    npm install @pnp/sp @pnp/logging
     ```
     
 6. **Start the Local Development Server:**
@@ -432,7 +414,7 @@ Create Create the following folders and files: Organize your project to maintain
 ReactUseReducerHookBasic/
 ├── src/
 │   ├── webparts/
-│   │   └── ReactUseReducerHookBasic/
+│   │   └── ç/
 │   │       ├── components/                 # UI Components
 │   │       │   ├── ReactUseReducerHookBasic.tsx  # Main React Component
 │   │       │   └── ReactUseReducerHookBasic.module.scss  # Component Styles
@@ -449,21 +431,21 @@ ReactUseReducerHookBasic/
 
 1. #### Define Action Types
     
-    Create `src/webparts//state/actions/listActionsTypes.ts` to define action types and their structure:
+    Create `src/webparts/ReactUseReducerHookBasic /state/actions/listActionsTypes.ts` to define action types and their structure:
     
 2. ```typescript
-            //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
-            
-            // Action types for list state management
-            export const FETCH_START = 'FETCH_START';
-            export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-            export const FETCH_ERROR = 'FETCH_ERROR';
-            
-            // Action type definitions
-            export type ListAction =
-              | { type: typeof FETCH_START }
-              | { type: typeof FETCH_SUCCESS; payload: any[] }
-              | { type: typeof FETCH_ERROR; payload: string };
+             //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
+             
+             // Action types for list state management
+             export const FETCH_START = 'FETCH_START';
+             export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+             export const FETCH_ERROR = 'FETCH_ERROR';
+             
+             // Action type definitions
+             export type ListAction =
+               | { type: typeof FETCH_START }
+               | { type: typeof FETCH_SUCCESS; payload: any[] }
+               | { type: typeof FETCH_ERROR; payload: string };
     ```
     
 3. Create the Reducer
