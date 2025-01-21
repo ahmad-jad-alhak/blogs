@@ -355,7 +355,7 @@ export default ReactUseReducerHookBasic;
 
 Below is an example using `useReducer` with PnP.js to fetch items in an SPFx context. All state transitions are handled in one place (the **reducer**), making it easier to **modify** and **debug**.
 
-## Step-by-Step Guide to Implementing `useReducer` with PnPjs and Creating the Folder Structure
+# Step-by-Step Guide to Implementing `useReducer` with PnPjs and Creating the Folder Structure
 
 This guide will walk you through the process of implementing a `useReducer`\-based state management system and organizing your project with a clean, scalable folder structure.
 
