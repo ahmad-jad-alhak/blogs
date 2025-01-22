@@ -9,6 +9,8 @@ tags: reactjs, sharepoint, spfx, sharepoint-online, usereducer-hook, sharepointf
 
 State management is essential for creating dynamic and interactive components in SharePoint Framework (SPFx) solutions. While `useState` is a popular choice for managing state in React-based SPFx web parts, `useReducer` is better when the state logic becomes more complex. This article demonstrates the advantages of `useReducer` in SPFx solutions using a counter example, highlighting its power and flexibility.
 
+[SPFx React useReducer Hook Sample](https://github.com/ahmad-jad-alhak/spfx-react-usereducer-hook-sample)
+
 ### **Why State Management Matters in SPFx**
 
 Imagine you’re building a web part that fetches data from multiple SharePoint lists. Managing the loading states, errors, and fetched data can quickly become messy, especially as your logic expands. Without a centralized approach, it’s easy to lose track of updates, causing bugs and inconsistencies. This is where `useReducer` shines—it centralizes state transitions and simplifies managing complex workflows.
@@ -434,18 +436,18 @@ ReactUseReducerHookBasic/
     Create `src/webparts/ReactUseReducerHookBasic /state/actions/listActionsTypes.ts` to define action types and their structure:
     
 2. ```typescript
-             //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
-             
-             // Action types for list state management
-             export const FETCH_START = 'FETCH_START';
-             export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-             export const FETCH_ERROR = 'FETCH_ERROR';
-             
-             // Action type definitions
-             export type ListAction =
-               | { type: typeof FETCH_START }
-               | { type: typeof FETCH_SUCCESS; payload: any[] }
-               | { type: typeof FETCH_ERROR; payload: string };
+              //  src/webparts/ReactUseReducerHookBasic/state/actions/listActionsTypes.ts
+              
+              // Action types for list state management
+              export const FETCH_START = 'FETCH_START';
+              export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+              export const FETCH_ERROR = 'FETCH_ERROR';
+              
+              // Action type definitions
+              export type ListAction =
+                | { type: typeof FETCH_START }
+                | { type: typeof FETCH_SUCCESS; payload: any[] }
+                | { type: typeof FETCH_ERROR; payload: string };
     ```
     
 3. Create the Reducer
