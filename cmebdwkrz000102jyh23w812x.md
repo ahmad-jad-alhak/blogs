@@ -111,6 +111,8 @@ Go back to your SharePoint library, upload the edited `.agent` file, and overwri
 
 Once updated, refresh your site. Your Copilot panel will now display **all the prompts you’ve added**—no more arbitrary three-prompt limit.
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1755175166649/4143ec8e-e582-419d-91d6-05fd07d11a06.png align="center")
+
 ### **A Few Caveats**
 
 * This is not an official feature — future Microsoft updates could change it.
