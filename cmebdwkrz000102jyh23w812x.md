@@ -1,5 +1,5 @@
 ---
-title: "How to Add More Than Three Starter Prompts in SharePoint Copilot - Step-by-Step Guide"
+title: "How to Add More Than Three Starter Prompts in SharePoint Agents  Step-by-Step Guide"
 datePublished: Thu Aug 14 2025 12:37:25 GMT+0000 (Coordinated Universal Time)
 cuid: cmebdwkrz000102jyh23w812x
 slug: how-to-add-more-than-three-starter-prompts-in-sharepoint-copilot-step-by-step-guide
