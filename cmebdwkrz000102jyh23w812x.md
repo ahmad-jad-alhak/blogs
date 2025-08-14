@@ -24,8 +24,6 @@ Starter prompts are the clickable suggestions that appear the moment someone ope
 * Reduce “blank screen” hesitation by showing people where to start.
     
 
-When you only get three, every slot becomes precious. But with some **creative thinking**, you can dramatically expand your “prompt playbook.”
-
 ### **The Current Limitation**
 
 it also means:
